@@ -1,6 +1,7 @@
-"""Makes privacy.html from IFocus's PRIVACY.md (Hebrew, then "---", then English).
+"""Makes privacy.html and terms.html from IFocus's PRIVACY.md and TERMS.md
+(each in Hebrew, then "---", then English).
 
-    python3 tools/privacy.py ../transcript/perfect-spouse/PRIVACY.md
+    python3 tools/pages.py ../transcript/perfect-spouse
 
 Only what the policy uses: "#" and "##" headings, paragraphs, "- " lists
 (an item goes on over lines indented by two spaces), **bold** and [links](url).
@@ -15,8 +16,8 @@ PAGE = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IFocus Privacy Policy</title>
-<meta name="description" content="How IFocus handles your data: everything is processed on your phone, and nothing is sent to us.">
+<title>{title}</title>
+<meta name="description" content="{description}">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
@@ -40,7 +41,7 @@ PAGE = """<!doctype html>
 </main>
 
 <footer>
-  <a href="./">IFocus</a> · <a href="mailto:tomer.pinchassi@gmail.com">tomer.pinchassi@gmail.com</a> · © 2026 IFocus
+  <a href="./">IFocus</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of service</a> · <a href="mailto:tomer.pinchassi@gmail.com">tomer.pinchassi@gmail.com</a> · © 2026 IFocus
 </footer>
 
 </div>
@@ -99,13 +100,23 @@ def block(md: str) -> str:
     return "\n".join(out)
 
 
+PAGES = {
+    # source: (page, title, description)
+    "PRIVACY.md": ("privacy.html", "IFocus Privacy Policy",
+                   "How IFocus handles your data: everything is processed on your phone, and nothing is sent to us."),
+    "TERMS.md": ("terms.html", "IFocus Terms of Service", "The terms of using IFocus."),
+}
+
+
 def main() -> None:
-    source = Path(sys.argv[1]).read_text(encoding="utf-8")
-    he, en = re.split(r"^---\s*$", source, maxsplit=1, flags=re.M)
-    page = PAGE.replace("{en}", block(en.strip())).replace("{he}", block(he.strip()))
-    target = Path(__file__).resolve().parent.parent / "privacy.html"
-    target.write_text(page, encoding="utf-8")
-    print(f"wrote {target}")
+    folder = Path(sys.argv[1])
+    site = Path(__file__).resolve().parent.parent
+    for source, (name, title, description) in PAGES.items():
+        he, en = re.split(r"^---\s*$", (folder / source).read_text(encoding="utf-8"), maxsplit=1, flags=re.M)
+        page = (PAGE.replace("{title}", title).replace("{description}", description)
+                .replace("{en}", block(en.strip())).replace("{he}", block(he.strip())))
+        (site / name).write_text(page, encoding="utf-8")
+        print(f"wrote {site / name}")
 
 
 if __name__ == "__main__":
