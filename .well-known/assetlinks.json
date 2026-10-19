@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.tpinchasi.perfectspouse",
+      "sha256_cert_fingerprints": [
+        "F0:5F:04:42:62:EB:28:24:BC:35:45:16:2D:AA:C3:0F:45:AF:74:7B:A0:75:3D:7D:AC:85:72:3C:B7:41:D8:78",
+        "5F:DD:56:1D:43:BA:5E:B6:30:DB:D3:D3:16:4C:0C:0A:3A:23:21:71:AC:08:B7:5B:0A:6F:1F:BD:8B:27:ED:7B"
+      ]
+    }
+  }
+]

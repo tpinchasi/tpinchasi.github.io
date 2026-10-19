@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IFocus · הזמנה לרשימה משותפת</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+<nav class="top">
+  <a class="brand" href="../"><img src="../icon.png" alt="">IFocus</a>
+  <div class="langs"><a href="../privacy.html">פרטיות</a></div>
+</nav>
+<main>
+<section class="lang" lang="he" dir="rtl">
+  <div class="hero">
+    <img src="../icon.png" alt="הסמל של IFocus">
+    <div>
+      <h1 id="title">הוזמנת לרשימה משותפת</h1>
+      <p class="tagline" id="from">ב-IFocus</p>
+    </div>
+  </div>
+  <p class="lead">משימות, אירועים ורשימות שמשותפים בקבוצה מופיעים אצל כולם, ומי שמסמן בוצע או משנה מועד — זה משתנה אצל כולם.</p>
+  <div class="note">
+    <p><strong>יש לך IFocus בטלפון?</strong> פותחים את הקישור הזה בטלפון, והאפליקציה תשאל אם להצטרף. אם הוא נפתח כאן, בדפדפן: בוחרים ״לפתוח באפליקציה״ מהתפריט.</p>
+    <p><strong>אין עדיין?</strong> IFocus נמצאת בבדיקה סגורה ב-Google Play, לאנדרואיד. מי שהזמין יכול לבקש שתצטרפו לבודקים.</p>
+  </div>
+  <p>ההזמנה פתוחה יומיים. המידע נשמר בגיליון ב-Google Drive של מי שיצר את הקבוצה, ולא אצלנו. <a href="../privacy.html">מדיניות הפרטיות</a></p>
+</section>
+</main>
+<footer>
+  <a href="../">IFocus</a> · <a href="../privacy.html">מדיניות פרטיות</a> · <a href="../terms.html">תנאי שימוש</a>
+</footer>
+</div>
+<script>
+  // The group's name and who invited, from the link's end (never sent to the server).
+  (function () {
+    var h = new URLSearchParams(location.hash.slice(1));
+    var n = h.get("n"), f = h.get("f");
+    if (n) document.getElementById("title").textContent = "הוזמנת לרשימה המשותפת ״" + n + "״";
+    if (f) document.getElementById("from").textContent = f + " הזמין/ה אותך, ב-IFocus";
+  })();
+</script>
+</body>
+</html>
