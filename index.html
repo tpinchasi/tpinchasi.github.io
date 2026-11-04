@@ -37,20 +37,24 @@
     <li><h3>What's coming, in one place</h3><p>Reminders and events by day, tasks, a shopping list, and reminders you say aloud.</p></li>
     <li><h3>Your calendar</h3><p>If you choose, events go into the calendar you pick and stay up to date.</p></li>
     <li><h3>Shared sign-up sheets</h3><p>When a Google Sheet for signing up arrives in a chat (who drives on which day, who brings what), sign up in one tap.</p></li>
+    <li><h3>Whole emails, if you choose</h3><p>Connect Gmail, read-only, and every new email is read in full with its attachments, on the phone.</p></li>
   </ul>
 
   <h2>Your data stays on your phone</h2>
   <p>Summaries are made by AI models that run on the phone. Nothing is sent to us: IFocus has no servers, and no ads, analytics or tracking. What leaves the phone is listed in the <a href="privacy.html#en">privacy policy</a>.</p>
 
-  <h2>How IFocus uses Google Sheets</h2>
-  <p>IFocus asks for permission to edit your Google Sheets (the <code>https://www.googleapis.com/auth/spreadsheets</code> scope) for one thing only: signing you up in a sheet that someone shared with you.</p>
-  <ol class="steps">
-    <li>A link to a sign-up sheet arrives in a chat you follow. The app shows the sheet's free rows (it opens sheets that anyone with the link can view, without an account).</li>
-    <li>You pick a row and the text to write, usually your name, and tap "לרשום" (Sign up).</li>
-    <li>The first time, Google asks you to allow IFocus to edit your sheets.</li>
-    <li>The app checks that the cell is still empty, writes your text in it, and reads it back to confirm. "לבטל" (Undo) clears it.</li>
-  </ol>
-  <p>It reads and writes only that cell, keeps nothing from your sheets, and sends nothing to us. You can take the permission back at any time: in the app's Settings ("לנתק", Disconnect), or in your Google Account.</p>
+  <h2>How IFocus uses your Google data</h2>
+  <p>IFocus asks for a Google permission only for a feature you turn on, and uses it only on your phone.</p>
+  <h3>Gmail: read-only, optional</h3>
+  <p>If you turn on "Full emails from Gmail" in Settings (it is off by default), IFocus asks for permission to read your email (the <code>https://www.googleapis.com/auth/gmail.readonly</code> scope). It then downloads the new emails in your inbox (not promotions, social or spam) and their attachments, such as a PDF invitation, straight from Gmail to your phone. Its on-device AI model summarizes them, and an appointment, a payment or a deadline becomes a reminder or an event.</p>
+  <ul>
+    <li>It never sends, changes or deletes email.</li>
+    <li>Nothing from your email is sent to us or to anyone else, used for ads or to train AI models, and no person reads it.</li>
+    <li>Without this permission, IFocus reads only what Gmail's notifications show: the sender, the subject and the first lines.</li>
+  </ul>
+  <h3>Google Drive: only the sheets you pick</h3>
+  <p>To sign you up in a Google Sheet someone shared with you, or to share tasks with a group, IFocus asks for access only to the Drive files you pick for it on Google's own screen, or that it creates (the <code>https://www.googleapis.com/auth/drive.file</code> scope). It writes only the cell you chose, or the group's sheet, and doesn't see your other files.</p>
+  <p>You can take any permission back at any time: in the app's Settings ("לנתק", Disconnect), or in your Google Account.</p>
   <div class="note">
     <p>IFocus's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
   </div>
@@ -77,20 +81,24 @@
     <li><h3>מה שמחכה לך, במקום אחד</h3><p>תזכורות ואירועים לפי ימים, משימות, רשימת קניות ותזכורות שאומרים בקול.</p></li>
     <li><h3>היומן שלך</h3><p>אם בחרת, האירועים נכנסים ליומן שבחרת ונשארים מעודכנים.</p></li>
     <li><h3>גיליונות הרשמה משותפים</h3><p>כשמגיע לצ׳אט גיליון Google להרשמה (מי מסיע באיזה יום, מי מביא מה), נרשמים בלחיצה.</p></li>
+    <li><h3>מיילים מלאים, אם תרצה</h3><p>מחברים את Gmail, לקריאה בלבד, וכל מייל חדש נקרא במלואו עם הקבצים שמצורפים אליו, בטלפון.</p></li>
   </ul>
 
   <h2>המידע שלך נשאר בטלפון</h2>
   <p>הסיכומים נעשים במודלים של בינה מלאכותית שרצים בטלפון. שום דבר לא נשלח אלינו: ל-IFocus אין שרתים, ואין בה פרסומות, ניתוח שימוש או מעקב. מה שיוצא מהטלפון מפורט ב<a href="privacy.html#he">מדיניות הפרטיות</a>.</p>
 
-  <h2>איך IFocus משתמשת ב-Google Sheets</h2>
-  <p>IFocus מבקשת הרשאה לערוך את הגיליונות שלך ב-Google Sheets לדבר אחד בלבד: לרשום אותך בגיליון ששיתפו איתך.</p>
-  <ol class="steps">
-    <li>קישור לגיליון הרשמה מגיע בצ׳אט שבחרת. האפליקציה מראה את השורות הפנויות בו (היא פותחת גיליונות שכל מי שיש לו את הקישור יכול לראות, בלי חשבון).</li>
-    <li>בוחרים שורה ואת מה לכתוב, בדרך כלל את השם, ולוחצים ״לרשום״.</li>
-    <li>בפעם הראשונה, Google מבקש ממך לאשר ל-IFocus לערוך את הגיליונות שלך.</li>
-    <li>האפליקציה בודקת שהתא עדיין ריק, כותבת בו, וקוראת אותו שוב כדי לוודא. ״לבטל״ מוחק את מה שנכתב.</li>
-  </ol>
-  <p>היא קוראת וכותבת רק בתא הזה, לא שומרת דבר מהגיליונות שלך ולא שולחת לנו כלום. אפשר לבטל את ההרשאה בכל זמן: בהגדרות של האפליקציה (״לנתק״) או בחשבון Google.</p>
+  <h2>איך IFocus משתמשת במידע שלך ב-Google</h2>
+  <p>IFocus מבקשת הרשאה מ-Google רק לתכונה שהפעלת, ומשתמשת בה רק בטלפון שלך.</p>
+  <h3>Gmail: קריאה בלבד, לבחירתך</h3>
+  <p>אם הפעלת בהגדרות ״מיילים מלאים מ-Gmail״ (כבוי כברירת מחדל), IFocus מבקשת הרשאה לקרוא את המיילים שלך (ההרשאה <code>https://www.googleapis.com/auth/gmail.readonly</code>). מאז היא מורידה מ-Gmail ישירות לטלפון את המיילים החדשים בתיבת הדואר (לא קידומי מכירות, רשתות חברתיות או ספאם) ואת הקבצים שמצורפים אליהם, כמו הזמנה ב-PDF. מודל הבינה המלאכותית שבטלפון מסכם אותם, ותור, תשלום או מועד הופכים לתזכורת או לאירוע.</p>
+  <ul>
+    <li>היא לא שולחת, לא משנה ולא מוחקת אף מייל.</li>
+    <li>שום דבר מהמיילים לא נשלח אלינו או לאף אחד אחר, לא משמש לפרסום או לאימון מודלים של בינה מלאכותית, ואף אדם לא קורא אותו.</li>
+    <li>בלי ההרשאה הזאת, IFocus קוראת רק את מה שמופיע בהתראות של Gmail: השולח, הנושא והשורות הראשונות.</li>
+  </ul>
+  <h3>Google Drive: רק הגיליונות שבחרת</h3>
+  <p>כדי לרשום אותך בגיליון Google ששיתפו איתך, או לשתף משימות עם קבוצה, IFocus מבקשת גישה רק לקבצים ב-Drive שבחרת בשבילה במסך של Google, או שהיא עצמה יוצרת (ההרשאה <code>https://www.googleapis.com/auth/drive.file</code>). היא כותבת רק בתא שבחרת, או בגיליון של הקבוצה, ולא רואה את שאר הקבצים שלך.</p>
+  <p>אפשר לבטל כל הרשאה בכל זמן: בהגדרות של האפליקציה (״לנתק״) או בחשבון Google.</p>
   <div class="note">
     <p>השימוש של IFocus במידע שמתקבל מממשקי ה-API של Google, והעברתו לכל אפליקציה אחרת, יעמדו ב-<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, כולל דרישות ה-Limited Use.</p>
   </div>
