@@ -20,7 +20,7 @@
 <main class="policy">
 <section class="lang" id="en" lang="en" dir="ltr">
 <h1>Privacy policy — IFocus</h1>
-<p class="updated">Updated: 4 November 2026</p>
+<p class="updated">Updated: 10 November 2026</p>
 <p>IFocus summarizes your calls and messages with the people you choose, and reminds you of what they asked of you. <strong>Everything happens on your phone: nothing is sent to us.</strong> What leaves your phone is only what's listed under "Network use".</p>
 <h2>What the app reads</h2>
 <p>Only for the people and groups you chose to follow:</p>
@@ -53,13 +53,25 @@
 </ul>
 <p>IFocus's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
 <p>The app has no ads, analytics or tracking.</p>
+<h2>How your data is protected</h2>
+<p>This is how everything the app reads is kept safe, and the data from your Google account in particular (Gmail emails and attachments, Drive sheets):</p>
+<ul>
+  <li><strong>It stays on your phone.</strong> IFocus has no servers. Emails, their attachments, and the summaries, tasks and events made from them are processed by a model that runs on the phone, and kept only in the app's private storage, which Android doesn't let other apps read. We, the developers, have no access to them, and no person reads them.</li>
+  <li><strong>Encrypted at rest.</strong> That storage is encrypted by Android's file-based encryption, with keys tied to your screen lock. The app's data is left out of Android's cloud backup.</li>
+  <li><strong>Encrypted in transit.</strong> The app talks to Google straight from the phone, only over an encrypted connection (HTTPS/TLS); unencrypted connections are blocked in it. Nothing passes through a server of ours or anyone else's.</li>
+  <li><strong>Google's permission isn't kept by the app.</strong> The permission is held by Google Play services on the phone. The app gets a short-lived access token from it when it needs one, holds it in memory only, and never writes it to storage. It asks only for the narrowest permissions: read-only for Gmail, and only the files you pick for Drive.</li>
+  <li><strong>Kept briefly, and yours to delete.</strong> Emails, attachments and summaries are deleted after a week; open reminders and events, when you mark them done. "לנתק" (Disconnect) in Settings takes the Google permission back at once; "למחוק את כל המידע" (Delete all data) in Settings deletes everything from the phone, and so does removing the app.</li>
+  <li><strong>A log for finding faults.</strong> The app writes, in its own folder on the phone, what it decided and why (for example, the wording of a task it made). It's kept for two weeks, and never leaves the phone.</li>
+  <li><strong>Never passed on.</strong> The data isn't sold, used for ads or for training AI models, or given to any third party. The only thing that leaves the phone is what you yourself choose to share with a sharing group, to the group's sheet in Drive.</li>
+</ul>
+<p>If you find a security problem, write to the address below and we'll deal with it promptly.</p>
 <h2>Contact</h2>
 <p>Questions and requests about privacy:  <a href="mailto:tomer.pinchassi@gmail.com">tomer.pinchassi@gmail.com</a></p>
 </section>
 
 <section class="lang" id="he" lang="he" dir="rtl">
 <h1>מדיניות פרטיות — IFocus</h1>
-<p class="updated">עודכן: 4 בנובמבר 2026</p>
+<p class="updated">עודכן: 10 בנובמבר 2026</p>
 <p>IFocus מסכמת את השיחות וההודעות שלך עם האנשים שבחרת, ומזכירה לך מה ביקשו ממך. <strong>הכול קורה בטלפון שלך: שום דבר לא נשלח אלינו.</strong> מה שיוצא מהטלפון — רק מה שמפורט למטה, ב״חיבורים לרשת״.</p>
 <h2>מה האפליקציה קוראת</h2>
 <p>רק של האנשים והקבוצות שבחרת לעקוב אחריהם:</p>
@@ -92,6 +104,18 @@
 </ul>
 <p>השימוש של IFocus במידע שמתקבל מממשקי ה-API של Google, והעברתו לכל אפליקציה אחרת, יעמדו ב-<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, כולל דרישות ה-Limited Use.</p>
 <p>אין באפליקציה פרסומות, ניתוח שימוש (אנליטיקס) או מעקב.</p>
+<h2>איך המידע מוגן</h2>
+<p>כך נשמר כל מה שהאפליקציה קוראת, ובפרט המידע מחשבון Google שלך (מיילים וקבצים מצורפים מ-Gmail, גיליונות ב-Drive):</p>
+<ul>
+  <li><strong>נשאר בטלפון.</strong> ל-IFocus אין שרתים. המיילים, הקבצים שמצורפים אליהם, והסיכומים, המשימות והאירועים שנוצרו מהם מעובדים במודל שרץ בטלפון, ונשמרים רק באחסון הפרטי של האפליקציה, ש-Android לא נותן לאפליקציות אחרות לקרוא. לנו, המפתחים, אין גישה אליהם, ואף אדם לא קורא אותם.</li>
+  <li><strong>מוצפן בטלפון.</strong> האחסון הזה מוצפן בהצפנת הקבצים של Android, עם מפתחות שקשורים לנעילת המסך שלך. המידע של האפליקציה לא נכלל בגיבוי של Android לענן.</li>
+  <li><strong>מוצפן בדרך.</strong> האפליקציה פונה ל-Google ישירות מהטלפון, רק בחיבור מוצפן (HTTPS/TLS); חיבורים לא מוצפנים חסומים בה. שום דבר לא עובר דרך שרת שלנו או של מישהו אחר.</li>
+  <li><strong>ההרשאה של Google לא נשמרת באפליקציה.</strong> את ההרשאה מחזיקים שירותי Google Play בטלפון. האפליקציה מקבלת מהם אסימון גישה קצר מועד כשהיא צריכה אותו, מחזיקה אותו בזיכרון בלבד ולא כותבת אותו לאחסון. היא מבקשת רק את ההרשאות המצומצמות ביותר: קריאה בלבד ב-Gmail, ורק קבצים שבחרת ב-Drive.</li>
+  <li><strong>נשמר לזמן קצר, ואפשר למחוק.</strong> מיילים, קבצים מצורפים וסיכומים נמחקים אחרי שבוע; תזכורות ואירועים פתוחים — כשמסמנים אותם. ״לנתק״ בהגדרות מבטל מיד את ההרשאה ב-Google; ״למחוק את כל המידע״ בהגדרות מוחק הכול מהטלפון, וכך גם הסרת האפליקציה.</li>
+  <li><strong>רישום לבדיקת תקלות.</strong> האפליקציה כותבת בתיקייה שלה בטלפון מה היא החליטה ולמה (למשל, הניסוח של משימה שנוצרה). הוא נשמר שבועיים, ולא יוצא מהטלפון.</li>
+  <li><strong>לא מועבר לאף אחד.</strong> המידע לא נמכר, לא משמש לפרסום או לאימון מודלים, ולא מועבר לצד שלישי. מהטלפון יוצא רק מה שבחרת בעצמך לשתף בקבוצת שיתוף, לגיליון ב-Drive של הקבוצה.</li>
+</ul>
+<p>אם מצאת בעיית אבטחה, כתבו לנו לכתובת שלמטה ונטפל בה בהקדם.</p>
 <h2>יצירת קשר</h2>
 <p>שאלות ובקשות בנושא פרטיות: <a href="mailto:tomer.pinchassi@gmail.com">tomer.pinchassi@gmail.com</a></p>
 </section>
